@@ -15,6 +15,8 @@ public class HomePage extends Frame
         super("HomePage");
         this.setLayout(null);
         this.setBounds(100,100,700,500);
+         tk = new ThemeParkListener(this);
+
         btnLogin = new Button("Login");
         btnSignUp = new Button("Sign Up");
         txtUserName = new TextField();
@@ -23,7 +25,7 @@ public class HomePage extends Frame
         lblPassword = new Label("Password");
         lblLoginCredentials = new Label("Enter Login Details");
         lblRegister = new Label("Register?");
-
+         
         lblLoginCredentials.setBounds(300,50,200,50);
         lblUserName.setBounds(100,110,70,50);
         txtUserName.setBounds(180,110,200,50);
@@ -32,7 +34,7 @@ public class HomePage extends Frame
         btnLogin.setBounds(200,230,100,50);
         lblRegister.setBounds(380,230,70,50);
         btnSignUp.setBounds(470,230,100,50);
-        
+
         add(lblLoginCredentials);
         add(lblUserName);
         add(txtUserName);
@@ -53,7 +55,7 @@ public class HomePage extends Frame
             System.exit(0);
           }
         });
-        
+
 
     }
 
@@ -63,6 +65,4 @@ public class HomePage extends Frame
       }
 
 }
-
-    
 

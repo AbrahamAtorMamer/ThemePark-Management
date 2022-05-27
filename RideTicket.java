@@ -58,7 +58,7 @@ class RideTicket extends Frame
             System.exit(0);
           }
         });
-        
+
 
     }
 

@@ -49,7 +49,7 @@ public class UserEntryTickets extends Frame
                  System.exit(0);
                }
              });
-             
+
 
           }
 

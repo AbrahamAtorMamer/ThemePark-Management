@@ -58,7 +58,7 @@ public class WaterRide extends Frame
             System.exit(0);
           }
         });
-        
+
 
     }
 }

@@ -13,16 +13,16 @@ public class VisitorLog extends Frame
     {
         super("Visitor's Log");
         this.setLayout(null);
-        this.setBounds(50,50,1000,800);
+        this.setBounds(50,50,500,500);
         tk = new ThemeParkListener(this);
         txtNumber = new TextField();
         txtDays = new TextField();
-        lblNumber = new Label("Number");
-        lblDays = new Label("Days");
-         lblNumber.setBounds(50,50,100,50);
-         txtNumber.setBounds(160,50,100,50);
-         lblDays.setBounds(50,100,100,50);
-         txtDays.setBounds(160,100,100,50);
+        lblNumber = new Label("Number Of Visitors");
+        lblDays = new Label("Highest Days");
+         lblNumber.setBounds(50,50,130,50);
+         txtNumber.setBounds(190,50,100,50);
+         lblDays.setBounds(50,100,130,50);
+         txtDays.setBounds(190,100,100,50);
 
          add(txtDays);
          add(lblDays);
@@ -36,7 +36,7 @@ public class VisitorLog extends Frame
              System.exit(0);
            }
          });
-         
+
 
      } 
 }

@@ -60,7 +60,7 @@ public class EntryTicket extends Frame
                  System.exit(0);
                }
              });
-             
+
 
           }
 

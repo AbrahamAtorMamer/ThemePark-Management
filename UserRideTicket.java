@@ -31,7 +31,7 @@ class UserRideTicket extends Frame
         lblCountry.setBounds(50,170,150,50);
         txtCountry.setBounds(210,170,100,50);
         btnBuy.setBounds(210,230,50,50);
-        
+
 
         add(txtName);
         add(txtAge);
@@ -49,7 +49,7 @@ class UserRideTicket extends Frame
             System.exit(0);
           }
         });
-        
+
 
     }
 
