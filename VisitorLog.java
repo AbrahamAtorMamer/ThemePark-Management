@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import java.lang.*;
 public class VisitorLog extends Frame
 {
     TextField txtNumber,txtDays;
@@ -29,15 +28,6 @@ public class VisitorLog extends Frame
          add(txtNumber);
          add(lblNumber);
 
-         addWindowListener(new WindowAdapter()
-         {
-           public void windowClosing(WindowEvent e)
-           {
-             System.exit(0);
-           }
-         });
-
-
-     } 
+ } 
 }
 

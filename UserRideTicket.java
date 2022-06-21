@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.lang.*;
 class UserRideTicket extends Frame
 {
-    TextField txtName,txtAge,txtCountry;
+    JTextField txtName,txtAge,txtCountry;
     Button btnBuy;
     Label lblName,lblAge,lblCountry;
     ThemeParkListener tk; 
@@ -15,12 +15,12 @@ class UserRideTicket extends Frame
     {
         super("Normal Ride Tickets");
         this.setLayout(null);
-        this.setBounds(50,50,1000,800);
+        this.setBounds(50,50,530,300);
         tk = new ThemeParkListener(this);
-        txtName = new TextField();
-        txtAge = new TextField();
-        txtCountry = new TextField();
-        btnBuy = new Button("Buy");
+        txtName = new JTextField();
+        txtAge = new JTextField();
+        txtCountry = new JTextField();
+        btnBuy = new Button("Obtain");
         lblName = new Label("Name");
         lblAge = new Label("Age");
         lblCountry = new Label("Country");
@@ -41,15 +41,6 @@ class UserRideTicket extends Frame
         add(lblCountry);
         add(btnBuy);
         btnBuy.addActionListener(tk);
-
-        addWindowListener(new WindowAdapter()
-        {
-          public void windowClosing(WindowEvent e)
-          {
-            System.exit(0);
-          }
-        });
-
 
     }
 

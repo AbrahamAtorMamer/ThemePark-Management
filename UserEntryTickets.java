@@ -7,7 +7,7 @@ import java.lang.*;
 
 public class UserEntryTickets extends Frame
 {
-         TextField txtName,txtAge,txtCountry;
+         JTextField txtName,txtAge,txtCountry;
          Button btnBuy;
          Label lblName,lblAge,lblCountry;
          ThemeParkListener tk;
@@ -15,11 +15,11 @@ public class UserEntryTickets extends Frame
          {
              super("Entry Tickets");
              this.setLayout(null);
-             this.setBounds(50,50,1000,800);
+             this.setBounds(50,50,530,300);
              tk   = new ThemeParkListener(this);
-             txtName = new TextField();
-             txtAge = new TextField();
-             txtCountry = new TextField();
+             txtName = new JTextField();
+             txtAge = new JTextField();
+             txtCountry = new JTextField();
              btnBuy = new Button("Buy");
              lblName = new Label("Name");
              lblAge = new Label("Age");
@@ -30,7 +30,7 @@ public class UserEntryTickets extends Frame
              txtAge.setBounds(210,110,100,50);
              lblCountry.setBounds(50,170,150,50);
              txtCountry.setBounds(210,170,100,50);
-             btnBuy.setBounds(50, 230, 50, 50);
+             btnBuy.setBounds(210,230,50,50);
 
              add(txtName);
              add(txtAge);
@@ -41,16 +41,6 @@ public class UserEntryTickets extends Frame
              add(btnBuy);
 
              btnBuy.addActionListener(tk);
-
-             addWindowListener(new WindowAdapter()
-             {
-               public void windowClosing(WindowEvent e)
-               {
-                 System.exit(0);
-               }
-             });
-
-
           }
 
 }

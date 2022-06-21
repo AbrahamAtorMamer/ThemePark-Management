@@ -4,22 +4,22 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import java.lang.*;
 public class DetailsForSignup extends Frame
  {
-    TextField txtUserNameD,txtPasswordD;
+    JTextField txtUserNameD;
+    JPasswordField txtPasswordD;
     Label lblUserName,lblPassword,lblLoginCredentials,lblRegister;
-    Button btnSignUp;
+    Button btnSave;
     ThemeParkListener tk;
     DetailsForSignup()
     {
-        super("Sign Up");
+        super("Details Sign Up");
         this.setLayout(null);
         this.setBounds(100,100,600,500);
         tk = new ThemeParkListener(this);
-        btnSignUp = new Button("Save");
-        txtUserNameD = new TextField();
-        txtPasswordD = new TextField();
+        btnSave = new Button("Save");
+        txtUserNameD = new JTextField();
+        txtPasswordD = new JPasswordField();
         lblUserName = new Label("Username");
         lblPassword = new Label("Password");
         lblLoginCredentials = new Label("Enter SignUp Details");
@@ -30,23 +30,15 @@ public class DetailsForSignup extends Frame
         txtUserNameD.setBounds(180,110,200,50);
         lblPassword.setBounds(100,170,70,50);
         txtPasswordD.setBounds(180,170,200,50);
-        btnSignUp.setBounds(200,230,100,50);
+        btnSave.setBounds(200,230,100,50);
 
         add(lblLoginCredentials);
         add(lblUserName);
         add(txtUserNameD);
         add(lblPassword);
         add(txtPasswordD);
-        add(btnSignUp);
+        add(btnSave);
 
-        btnSignUp.addActionListener(tk);
-        addWindowListener(new WindowAdapter()
-        {
-          public void windowClosing(WindowEvent e)
-          {
-            System.exit(0);
-          }
-        });
+        btnSave.addActionListener(tk);
         }
-
 }
