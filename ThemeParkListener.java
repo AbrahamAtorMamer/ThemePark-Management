@@ -115,6 +115,12 @@ System.out.println(en);
 		}
 		if(e.getActionCommand().equals("Login") )
 		{
+			if(homePage.txtUserName.getText().equals("") || homePage.txtPassword.getText().equals(""))
+			{
+				JOptionPane.showMessageDialog(null,"Please Fill in All the Fileds");
+
+			}
+else{
 		 if(homePage.txtUserName.getText().equals("admin") && homePage.txtPassword.getText().equals("admin@1"))
 			{
 			String username = this.homePage.txtUserName.getText();
@@ -178,6 +184,7 @@ System.out.println(en);
         } 
 		}
 	}
+	}
 		/*if(e.getActionCommand().equals("Login"))
 		{
 			String username = this.homePage.txtUserName.getText();
@@ -230,35 +237,19 @@ System.out.println(en);
 		{
             entryTicket = new EntryTicket();   
 			entryTicket.setVisible(true);
+			dashBoard.setVisible(false);
 		}
 		if(e.getActionCommand().equals("Ride Ticket"))	
 		{
 			rideTicket = new RideTicket();
-			rideTicket.setVisible(true);
+			rideTicket.setVisible(true);	
+			dashBoard.setVisible(false);		
 		}
 		if(e.getActionCommand().equals("Water Ride Ticket"))
 		{
-			waterRide =new WaterRide();
+		    waterRide = new WaterRide();
 			waterRide.setVisible(true);
-			try {
-            Class.forName("com.mysql.jdbc.Driver");  
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost/theme park managment?characterEncoding=utf8","root","");   
-            String query = "SELECT * FROM `waterrideticket`";
-           java.sql.Statement stmt=con.createStatement();
-           ResultSet rs = stmt.executeQuery(query);
-
-           while(rs.next())
-           {
-              String name = rs.getString(1);
-              String age = rs.getString(2);
-              String country = rs.getString(3);
-              String[][] data ={{name,age,country}};
-			  DefaultTableModel ta = (DefaultTableModel)waterRide.table.getModel();
-			   ta.addRow(data);
-           }
-		  } catch(Exception n){
-
-		  }
+			dashBoard.setVisible(false);
 			
 		}
 		if(e.getActionCommand().equals("Cancel"))
