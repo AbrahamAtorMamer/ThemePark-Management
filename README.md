@@ -1,0 +1,1 @@
+This project is about Theme Park where a customer can be able to book races. The user first registers whre only authenticated user is allowed to access the services which are added only by an admin user.
